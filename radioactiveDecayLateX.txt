@@ -1,0 +1,438 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{amsmath}
+\usepackage[bottom=2.0cm,top=2.0cm,left=2.0cm,right=2.0cm]{geometry}
+\usepackage[english]{babel}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{float}
+\restylefloat{table}
+\usepackage{hyperref}  %%%%
+\hypersetup{colorlinks,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black} %%%%
+\usepackage{gensymb}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\begin{document}
+
+\begin{titlepage}
+
+	   \begin{center}
+		\begin{figure}[htb!]
+			\begin{flushleft}
+				\includegraphics[width=3.9cm,height=3.9cm]{bounlogo.jpg}
+			\end{flushleft}
+		\end{figure}
+        \vspace{-3.8cm}
+        \hspace{2.2cm}\Large{\textbf{Boğaziçi University}}
+        \newline
+        
+        \hspace{3.6cm}\Large{The Faculty of Arts and Sciences }
+        \newline
+        
+        \hspace{-1.2cm}\Large{Physics Department}
+        \end{center}
+      
+        
+        \vspace{70pt}
+    \begin{center}
+        \LARGE\underline{\textbf{ Radioactive Decay }}
+    
+        \vspace{30pt}
+        \textbf{Abstract}
+        
+        \vspace{15pt}
+        
+        The purpose of the experiment was to determine the decay constant, $\lambda$, of the isotope Rn220. A Wulf electroscope was used to observe discharge time under different potentials and different amounts of matter were used. The data was then used to investigate the phenomenon. As a result, $\lambda$ was calculated to be 1.21 x $10^{-2}$ +/- 4.29 x $10^{-4}$ $s^{-1}$, which is within 0.93$\sigma$ of the calculated theoretical value.
+        \end{center}
+       
+        
+        \vspace{120pt}
+        
+       
+        \underline{\Large{Student:}}
+        \Large{Tunahan Yalçın} 
+        
+    \begin{center}
+    
+     \vspace{\fill}
+        cover
+        
+    \end{center}
+        
+        
+        
+        
+	
+\end{titlepage}
+
+
+
+
+\newpage
+
+\Large\tableofcontents
+\thispagestyle{empty}
+             
+\newpage
+\pagenumbering{arabic}
+\large
+
+\section{Introduction}
+\subsection{History}
+In 1895, Wilhelm Röntgen (1845-1923) discovered a new kind of ray, which he called X ray, with X standing for "unknown." For this, Röntgen was awarded the first Nobel Prize for physics in 1901. Scientists around the world were immediately fascinated by X rays, which could travel through solid substances and produce photographs of people's bones. \newline
+Only a few months after the discovery of X rays, a French physicist named Henri Becquerel found, by accident, that a sample of uranium ore emitted rays that could fog a photographic plate even without exposure to light. After presenting his results in February 1896, few scientists -including Becquerel himself- paid much attention to these "Becquerel rays" or "uranium rays." The fascination with previously discovered X rays continued to monopolize scientific attention until Marie Curie seized on Becquerel's neglected uranium rays for her doctoral topic. \hyperref[ref:1]{[1]}
+
+\subsection{Theory}
+
+Radioactive decay is a random process. Any given particle has a certain probability per unit time of spontaneous decay. The decay probability is independent of the previous life of the particle.\hyperref[ref:2]{[2]}  The probability per unit time that a given nucleus will decay is called its \emph{decay constant}, $\lambda$ and is related to \emph{activity, A} by
+
+\begin{equation}\label{eqn:1}
+    A = \frac{-d\emph{N}}{dt} = \lambda \hspace{2pt} \emph{N}
+\end{equation}
+
+
+where \emph{N}(t) is the number of radioactive nuclei in the sample at time \emph{t}. The activity is measured in becquerels
+ (Bq), which is defined as one decay per second.\footnote{An older unit, the curie (1 Ci = 3.7 × 1010 Bq) is also still in common use. A typical laboratory radioactive source has an
+activity of a few tens of kBq, i.e. micro Ci.}
+The probability here refers to the total probability, because \begin{math}\lambda \end{math} could be the sum of decay probabilities for a number of distinct final states in the same way that the total decay width of an unstable particle is the sum of its partial widths. Integrating \hyperref[eqn:1]{[1]} gives
+
+\begin{equation}\label{eqn:2}
+    A(t) = \lambda \hspace{2pt} N_{o}\hspace{2pt} e^{-\lambda t}
+\end{equation}
+
+where \begin{math}N_{o}\end{math} is the initial number of nuclei, i.e. the number at \emph{t} = 0. \hyperref[ref:3]{[3]} The number of particles decreases exponentially. Hence the universal decay law is
+
+\begin{equation}
+    N(t) = N_{o} e^{-\lambda t}
+\end{equation},
+
+When one speaks of a single particle, they usually refer to its mean lifetime. The mean lifetime (\begin{math}\tau\end{math}) of a particle is 
+
+
+\begin{equation}\label{eqn:4}
+    \tau=\frac{1}{\lambda}
+\end{equation}
+
+For a large number of particles, \begin{math}\frac{1}{e}\end{math} of them will not have decayed after a time \begin{math}\tau\end{math}. In nuclear physics, lifetimes are usually specified by the half-life(\begin{math}t_{\frac{1}{2}}\end{math}) the time after which one-half of the sample has decayed. The half-life is shorter than the mean-life, \begin{math}\tau \end{math} and \begin{math}t_{\frac{1}{2}}\end{math} are related by \hyperref[ref:2]{[2]}
+
+\begin{equation}\label{eqn:5}
+    t_{\frac{1}{2}} = \tau \hspace{2pt} ln2
+\end{equation}
+
+
+
+\newpage
+\section{Experiment}
+\subsection{Apparatus}
+\begin{itemize}
+    \item Wulf's Electroscope
+    \item Thorium Salt
+    \item Ionization Chamber
+    \item High-Voltage(HV) Power Supply (0-5 kV)
+    \item Stopwatch
+\end{itemize}
+
+\subsection{Setup}
+
+\begingroup
+    \setlength{\intextsep}{2pt}
+    \setlength{\columnsep}{12pt}
+    \begin{wrapfigure}
+    \centering
+    \includegraphics[width=10cm]{radioactive_decay.png}
+    \caption{Figure 1: Setup }\label{fig:fig1}
+    \end{wrapfigure}
+
+    \endgroup
+
+\subsection{Procedure}
+
+\begin{enumerate}
+    \item Connected the circuit displayed in %add the figure here
+    and proceeded with the experiment after the instructor's check.
+    \item Made sure that the hoses connected to the Thorium salt vessel are clamped down.
+    \item Turned on the HV supply to about 3-4 kV.
+    \item Observed the electroscope for several minutes for visible movements. If observed, that means that the chamber may contain some radioactive material and the HV must be turned off opening the chamber to the air. There is no possibility of radioactive hazards since the amount of radiation that might be released is considered safe.
+    \item As a further protection, made sure that the HV connected to the ionization chamber is taken from the posts that include the 50 M\ohm resistors in the HV power supply.
+    \item After confirming that the setup is working properly, set the HV to 2500 V and opened the clamp shutting the air flow between the Thorium vessel and the ionization chamber. Quickly squeezed the bottle several times and closed the clamp again immediately starting the timer as well as recording the number of squeezes given to the Thorium bottle.
+    \item Recorded the time at each instant the electroscope discharged until the electroscope stopped moving.
+    \item Repeated the previous step with different number of squeezes for four times.
+    \item Repeated the previous two steps for HV values of 3000, 3500, 4000 and 4500 V. Also tried using different number of squeezes each time.
+\end{enumerate}
+
+\section{Data Analysis}
+The raw data for times of each observed discharge are given in the tables below. There is a systematical error caused by human factor which is due to the delay in data taking. A much needed calibration was not possible due to being unable to conduct the experiment. However, the data taking delay is assumed to be 0.25 seconds which is the average reflex time of visual for a person.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+\multicolumn{6}{|c|}{2500 V}       \\ \hline
+ & t_1 (s) & t_2 (s) & t_3 (s) & t_4 (s) & t_5 (s)\\ \hline
+5 squeeze   & 13.03 & 32.11 & 57.92 & 94.91 & 161.89 \\ \hline
+7 squeeze   & 7.09 & 20.67 & 40.41 & 65.26 & 106.87\\ \hline
+9 squeeze   & 15.64 & 30.94 & 51.33 & 77.47 & 115.70 \\ \hline
+11 squeeze  & 15.57 & 32.64 & 52.91 & 81.89 & 126.82\\ \hline
+
+\end{tabular}
+\end{table}
+
+\vspace{15pt}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+\multicolumn{6}{|c|}{3000 V}       \\ \hline
+ & t_1 (s) & t_2 (s) & t_3 (s) & t_4 (s) & t_5 (s)\\ \hline
+5 squeeze   & 14.23 & 31.03 & 56.53 & 94.2 & 165.53 \\ \hline
+7 squeeze   & 15.45 & 32.53 & 53.36 & 80.12 & 123.22\\ \hline
+9 squeeze   & 17.57 &34.73 & 56.39 & 86.8 & 135.72 \\ \hline
+11 squeeze  & 10.68 & 26.6 & 46.06 & 72.94 & 111.52\\ \hline
+
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+\multicolumn{6}{|c|}{3500 V}       \\ \hline
+ & t_1 (s) & t_2 (s) & t_3 (s) & t_4 (s) & t_5 (s)\\ \hline
+5 squeeze   & 19.9 & 40.1 & 66.73 & 109.08 & 186.41 \\ \hline
+7 squeeze   & 22.47 & 44.34 & 71.49 & 115.65 & 222.22\\ \hline
+9 squeeze   & 4.67 & 19.31 & 36.64 & 58.69 & 90.48 \\ \hline
+11 squeeze  & 21.5 & 40.96 & 66.87 & 105.7 & 184.46\\ \hline
+
+\end{tabular}
+\end{table}
+
+\vspace{15pt}
+
+The charging period 
+\begin{equation}
+    s_i = t_{i+1} - t_i
+\end{equation}
+and the corresponding average times can be calculated.
+\begin{equation}
+    T_i =\frac{t_{i+1} + t_i}{2}
+\end{equation}
+where $t_i$ is the time corresponding to the instant a discharge is observed. \newline
+The uncertainties in the stated data were calculated using the formula:
+\begin{equation}\label{eqn:8}
+    \Delta f(x_i) = \sqrt{\sum_{i} (\frac{\partial f}{\partial x_i} \Delta x_i ) ^2}
+\end{equation}
+
+To use the \hyperref[eqn:5]{equation 5} in the Theory section, the natural logarithm of $s_i$ was taken and propagated according to \hyperref[eqn:8]{equation 8}. Then these ln(s) s were plotted vs the average times, $T_i$, for each number of pumps and different voltages to examine the relationship between them. A line was fitted to these graphs using the linear dependence in the \hyperref[eqn:5]{equation 5}. The fit function has the formula 
+\begin{equation}
+    ln(s) = p0 + p1. T
+\end{equation}
+
+\vspace{10pt}
+
+\begingroup
+    \setlength{\intextsep}{2pt}
+    \setlength{\columnsep}{12pt}
+    \begin{wrapfigure}
+    \centering
+    \includegraphics[width=10cm]{2.5_5.png}
+    \caption{Figure 2: ln(s) vs T for 2.5kV 5 pumps }\label{fig:fig2}
+    \end{wrapfigure}
+
+    \endgroup
+\vspace{10pt}   
+\begingroup
+    \setlength{\intextsep}{2pt}
+    \setlength{\columnsep}{12pt}
+    \begin{wrapfigure}
+    \centering
+    \includegraphics[width=10cm]{2.5_7.png}
+    \caption{Figure 3: ln(s) vs T for 2.5kV 7 pumps }\label{fig:fig3}
+    \end{wrapfigure}
+
+    \endgroup
+\vspace{10pt}    
+\begingroup
+    \setlength{\intextsep}{2pt}
+    \setlength{\columnsep}{12pt}
+    \begin{wrapfigure}
+    \centering
+    \includegraphics[width=10cm]{2.5_9.png}
+    \caption{Figure 4: ln(s) vs T for 2.5kV 9 pumps }\label{fig:fig4}
+    \end{wrapfigure}
+
+    \endgroup
+\vspace{10pt}
+\begingroup
+    \setlength{\intextsep}{2pt}
+    \setlength{\columnsep}{12pt}
+    \begin{wrapfigure}
+    \centering
+    \includegraphics[width=10cm]{2.5_11.png}
+    \caption{Figure 5: ln(s) vs T for 2.5kV 11 pumps }\label{fig:fig5}
+    \end{wrapfigure}
+
+    \endgroup
+\vspace{10pt}
+\begingroup
+    \setlength{\intextsep}{2pt}
+    \setlength{\columnsep}{12pt}
+    \begin{wrapfigure}
+    \centering
+    \includegraphics[width=10cm]{3_5.png}
+    \caption{Figure 6: ln(s) vs T for 3kV 5 pumps }\label{fig:fig6}
+    \end{wrapfigure}
+
+    \endgroup
+    
+\vspace{10pt}
+\begingroup
+    \setlength{\intextsep}{2pt}
+    \setlength{\columnsep}{12pt}
+    \begin{wrapfigure}
+    \centering
+    \includegraphics[width=10cm]{3_7.png}
+    \caption{Figure 7: ln(s) vs T for 3kV 7 pumps }\label{fig:fig7}
+    \end{wrapfigure}
+
+    \endgroup
+
+\vspace{10pt}
+\begingroup
+    \setlength{\intextsep}{2pt}
+    \setlength{\columnsep}{12pt}
+    \begin{wrapfigure}
+    \centering
+    \includegraphics[width=10cm]{3_9.png}
+    \caption{Figure 8: ln(s) vs T for 3kV 9 pumps }\label{fig:fig8}
+    \end{wrapfigure}
+
+    \endgroup
+
+\vspace{10pt}
+\begingroup
+    \setlength{\intextsep}{2pt}
+    \setlength{\columnsep}{12pt}
+    \begin{wrapfigure}
+    \centering
+    \includegraphics[width=10cm]{3_11.png}
+    \caption{Figure 9: ln(s) vs T for 3kV 11 pumps }\label{fig:fig9}
+    \end{wrapfigure}
+
+    \endgroup
+
+\vspace{10pt}
+\begingroup
+    \setlength{\intextsep}{2pt}
+    \setlength{\columnsep}{12pt}
+    \begin{wrapfigure}
+    \centering
+    \includegraphics[width=10cm]{3.5_5.png}
+    \caption{Figure 10: ln(s) vs T for 3.5kV 5 pumps }\label{fig:fig10}
+    \end{wrapfigure}
+
+    \endgroup
+    
+\vspace{10pt}
+\begingroup
+    \setlength{\intextsep}{2pt}
+    \setlength{\columnsep}{12pt}
+    \begin{wrapfigure}
+    \centering
+    \includegraphics[width=10cm]{3.5_7.png}
+    \caption{Figure 11: ln(s) vs T for 3.5kV 7 pumps }\label{fig:fig11}
+    \end{wrapfigure}
+
+    \endgroup
+
+\vspace{10pt}
+\begingroup
+    \setlength{\intextsep}{2pt}
+    \setlength{\columnsep}{12pt}
+    \begin{wrapfigure}
+    \centering
+    \includegraphics[width=10cm]{3.5_9.png}
+    \caption{Figure 12: ln(s) vs T for 3.5kV 9 pumps }\label{fig:fig12}
+    \end{wrapfigure}
+
+    \endgroup
+    
+\vspace{10pt}
+\begingroup
+    \setlength{\intextsep}{2pt}
+    \setlength{\columnsep}{12pt}
+    \begin{wrapfigure}
+    \centering
+    \includegraphics[width=10cm]{3.5_11.png}
+    \caption{Figure 13: ln(s) vs T for 3.5kV 11 pumps }\label{fig:fig13}
+    \end{wrapfigure}
+\endgroup
+\vspace{5pt}
+\newline
+From the equations in the theory section and from \hyperref[eqn:6]{equation 6} it can be concluded that the p1 s in the graphs above are in fact $\lambda$s. Using these individual $\lambda$ values, one can obtain a single value using many different methods. In this text, one of them is applied.
+\newline
+In order to calculate $\lambda$, the individual values were put in a histogram and fitted with a Gaussian fit.
+
+\vspace{10pt}
+\begingroup
+    \setlength{\intextsep}{2pt}
+    \setlength{\columnsep}{14pt}
+    \begin{wrapfigure}
+    \centering
+    \includegraphics[width=10cm]{hist_of_p1s-1.png}
+    \caption{Figure 14: Histogram of p1 s }\label{fig:fig14}
+    \end{wrapfigure}
+\endgroup
+\vspace{15pt}
+
+From the figure it is concluded that $\lambda$ = 1.21 x $10^{-2}$ +/- 4.29 x $10^{-4} s^{-1}$
+
+
+    
+\section{Conclusion}
+The purpose of the experiment was to determine the decaying constant of the Rn220 using high voltage applied to a Wulf electroscope. The data confirmed the linear relationship between ln(s) and T supported by theory. No correlation was observed between the applied potential and the decaying constant. \newline
+There could be human caused errors like the reflex time and other systematical errors from the devices like the stopwatch. These errors might have caused bad fits that are visible in the graphs.
+\newline
+$\lambda$ was calculated to be $\lambda$ = 1.21 x $10^{-2}$ +/- 4.29 x $10^{-4}$ using the graph. \newline
+Also calculating the theoretical value from \hyperref[eqn:5]{equation 5} we get, \newline
+\begin{center}
+    $\lambda$ = \begin{math} \frac{ln(2)}{55.6} \end{math} = 1.25 x \begin{math} 10^{-2} s^{-1}\end{math}
+\end{center}
+\vspace{5pt}
+\begin{center}
+    \begin{math}
+    \frac{|\lambda - \lambda_{calc}}{\Delta \lambda_{calc}} = \frac{(1.25 - 1.21) x 10^{-2}}{4.29 x 10^{-4}} s^{-1} = 0.93
+    \end{math}
+\end{center}
+\vspace{5pt}
+\begin{center}
+    \begin{math}
+    \frac{\Delta \lambda_{calc}}{\lambda_{calc}} = 0.035 \%
+    \end{math}
+\end{center}
+The known value is within 0.93 $\sigma$ of $\lambda_{calc}$ and $\Delta \lambda$ is 0.035 \% of $\lambda_{calc}$. \newline
+For further studying this topic, there are some possible steps for improving the experiment. Some suggestions include removing the human factor by replacing the stopwatch with
+more reliable alternative, a better ionizing chamber that can be vacuumed to remove the remaining
+isotopes that may affect the experiment.
+
+
+\section{References}
+\begin{enumerate}
+    \item Pasachoff, Naomi.1996. Marie Curie and the Science of Radioactivity. 35-36 \label{ref:1} 
+    \item Rohlf, James William. 1994. Modern Physics from $\alpha$ to $\zeta$. 305. \label{ref:2}
+    \item Martin, Brian. 2009. Nuclear and Particle Physics. 53 \label{ref:3}
+    \item Gülmez, Erhan. 1999. Advanced Physics Experiments. Radioactive Decay. 36
+\end{enumerate}
+
+\section{Code}
+All the source code for Root, LateX and the raw data can be found at
+\url{https://github.com/tunahanyalcin/RadioactiveDecay}
+
+\end{document}
+
+
+
+
+
